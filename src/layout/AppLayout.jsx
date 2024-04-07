@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Outlet } from "react-router-dom";
+import logo from "../logo.svg";
 
 const AppLayout = () => {
   return (
@@ -12,11 +13,7 @@ const AppLayout = () => {
       <Navbar expand="lg" data-bs-theme="dark" className="Navbar">
         <Container fluid>
           <Navbar.Brand href="/">
-            <img
-              width={90}
-              src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
-              alt="logo"
-            />
+            <img width={40} src={logo} alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
