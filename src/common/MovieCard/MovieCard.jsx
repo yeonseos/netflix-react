@@ -2,8 +2,19 @@ import React from "react";
 import "./MovieCard.style.css";
 import Badge from "react-bootstrap/Badge";
 import { FaStar } from "react-icons/fa";
+import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 
 const MovieCard = ({ movie }) => {
+  const { data: genreData } = useMovieGenreQuery();
+
+  const showGenre = (genreIdList) => {
+    if (!genreData) return [];
+    const genreNameList = genreIdList.map((id) => {
+      const genreObj = genreData.find((genre) => genre.id === id);
+      return genreObj.name;
+    });
+    return genreNameList;
+  };
   return (
     <div
       style={{
@@ -15,7 +26,14 @@ const MovieCard = ({ movie }) => {
       className="movie-card"
     >
       <div className="overlay">
-        <h1>{movie.title}</h1>
+        <h1>
+          <span>{movie.title}</span>
+          {movie.adult ? (
+            <span className="age-limit over18">19</span>
+          ) : (
+            <span className="age-limit under18">All</span>
+          )}
+        </h1>
 
         <div>
           <div className="fz-14">
@@ -25,16 +43,12 @@ const MovieCard = ({ movie }) => {
             </span>
             {movie.vote_average.toFixed(1)}
           </div>
-          <div className="fz-12 fw-normal">
-            누적 관객 수 {movie.popularity.toFixed(0)}명
-          </div>
-          <div className="age-limit fz-12">
-            {movie.adult ? "over18" : "under18"}
-          </div>
         </div>
         <div className="movie-genre">
-          {movie.genre_ids.map((id) => (
-            <Badge bg="danger">{id}</Badge>
+          {showGenre(movie.genre_ids).map((genre, index) => (
+            <Badge bg="danger" key={index}>
+              {genre}
+            </Badge>
           ))}
         </div>
       </div>

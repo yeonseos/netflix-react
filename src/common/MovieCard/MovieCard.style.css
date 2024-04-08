@@ -53,8 +53,26 @@
 .movie-genre > span {
   margin-right: 8px;
 }
+
 .age-limit {
-  color: #dc3545;
-  font-weight: 900;
-  font-style: italic;
+  font-size: 12px;
+  margin-top: -2px;
+  padding: 4px;
+  padding-right: 6px;
+  margin-left: 6px;
+  border-radius: 50%;
+  position: relative;
+  top: -2px;
+}
+.age-limit.over18 {
+  background: #dc3545;
+}
+.age-limit.under18 {
+  background: #e58a00;
+}
+
+.movie-card-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
