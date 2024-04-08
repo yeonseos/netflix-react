@@ -1,5 +1,6 @@
 import React from "react";
-import Banner from "./Banner/Banner";
+import Banner from "./components/Banner/Banner";
+import PopularMovieSlide from "./components/PopularMovieSlide/PopularMovieSlide";
 
 // 1. banner => popular movie의 첫 번째 아이템
 // 2. popular movie
@@ -10,6 +11,7 @@ const Homepage = () => {
   return (
     <div>
       <Banner />
+      <PopularMovieSlide />
     </div>
   );
 };

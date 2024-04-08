@@ -1,0 +1,7 @@
+.movie-slide h3 {
+  padding-left: 2rem;
+}
+.carousel-container {
+  overflow: hidden;
+  height: 440px;
+}
