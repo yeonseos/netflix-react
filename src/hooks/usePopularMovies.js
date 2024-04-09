@@ -1,8 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import api from "../utils/api";
 
+const language = "?language=ko-KR";
+
 const fetchPopularMovies = () => {
-  return api.get(`/movie/popular`);
+  return api.get(`/movie/popular${language}`);
 };
 
 export const usePopularMoviesQuery = () => {

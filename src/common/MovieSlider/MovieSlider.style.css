@@ -1,5 +1,6 @@
 .movie-slide h3 {
   padding-left: 2rem;
+  font-size: 20px;
 }
 .carousel-container {
   overflow: hidden;

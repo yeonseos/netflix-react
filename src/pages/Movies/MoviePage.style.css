@@ -1,0 +1,21 @@
+.pagination {
+  margin-top: 40px;
+  justify-content: center;
+}
+.row > * {
+  margin-bottom: 16px;
+}
+
+.page-link-m {
+  color: #fff;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+.active > .page-link-m {
+  background-color: #dc3545;
+}
+
+.page-link-m:hover {
+  background-color: #dc3545;
+}
