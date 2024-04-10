@@ -4,5 +4,6 @@
 }
 .carousel-container {
   overflow: hidden;
-  height: 440px;
+  height: 100%;
+  padding: 3rem 0;
 }

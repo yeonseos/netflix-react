@@ -46,9 +46,9 @@ const MovieCard = ({ movie }) => {
         </div>
         <div className="movie-genre">
           {showGenre(movie.genre_ids).map((genre, index) => (
-            <Badge bg="danger" key={index}>
+            <span className="movieCard-badge" key={index}>
               {genre}
-            </Badge>
+            </span>
           ))}
         </div>
       </div>

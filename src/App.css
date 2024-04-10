@@ -6,3 +6,10 @@ body {
   background-color: #000;
   color: #fff;
 }
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
