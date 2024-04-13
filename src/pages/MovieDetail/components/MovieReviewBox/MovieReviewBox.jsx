@@ -8,17 +8,17 @@ const MovieReviewBox = ({ review }) => {
     <div className="review-box">
       <div className="review-author-wrap">
         {review.author_details.avatar_path === null ? (
-          <div className="user_avatar">
+          <div className="user-image">
             <img
               src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur-gris.png"
-              alt=""
+              alt="사용자 프로필 이미지"
             />
           </div>
         ) : (
-          <div className="user_avatar">
+          <div className="user-image">
             <img
               src={`${avatar_basic_url}` + review.author_details.avatar_path}
-              alt=""
+              alt="사용자 프로필 이미지"
             />
           </div>
         )}

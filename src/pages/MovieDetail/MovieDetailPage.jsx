@@ -6,6 +6,7 @@ import MovieDetailInfo from "./components/MovieDetailInfo/MovieDetailInfo";
 import { useMovieDetailQuery } from "../../hooks/useMovieDetail";
 import "./MovieDetailPage.style.css";
 import MovieReview from "./components/MovieReview/MovieReview";
+import Recommendation from "./components/Recommendation/Recommendation";
 
 const MovieDetailPage = () => {
   const { id } = useParams();
@@ -27,6 +28,7 @@ const MovieDetailPage = () => {
     <div className="detail-page-wrap">
       <MovieDetailInfo movie={movie} id={id} />
       <MovieReview id={id} />
+      <Recommendation id={id} />
     </div>
   );
 };

@@ -1,15 +1,17 @@
-.detail-review-wrap {
+.recommend-wrap {
   margin-top: 8rem;
+  margin-bottom: 16rem;
 }
-.detail-review-wrap h2 {
+.recommend-wrap h2 {
   color: #fff;
   padding-left: 2rem;
   padding-bottom: 1.6rem;
+  margin-bottom: 2.4rem;
   border-bottom: 2px solid #503396;
   font-weight: 600;
 }
 @media (max-width: 1024px) {
-  .detail-review-wrap {
+  .recommend-wrap {
     width: 100%;
     padding: 0 2.4rem;
   }

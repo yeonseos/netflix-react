@@ -1,5 +1,6 @@
 import React from "react";
 import "./MovieDetailInfo.style.css";
+import MoviePreview from "../MoviePreview/MoviePreview";
 
 const MovieDetailInfo = ({ movie }) => {
   const priceToString = (price) => {
@@ -41,6 +42,7 @@ const MovieDetailInfo = ({ movie }) => {
             {movie?.runtime}분
           </li>
         </ul>
+        <MoviePreview id={movie.id} title={movie.title} />
       </div>
     </div>
   );
