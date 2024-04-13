@@ -88,9 +88,7 @@ const MoviePage = () => {
 
       <div className="movieList-area">
         {filteredData?.map((movie, index) => (
-          <div key={index}>
-            <MovieCard movie={movie} />
-          </div>
+          <MovieCard key={index} movie={movie} />
         ))}
       </div>
 
