@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import MovieDetailInfo from "./components/MovieDetailInfo/MovieDetailInfo";
 import { useMovieDetailQuery } from "../../hooks/useMovieDetail";
 import "./MovieDetailPage.style.css";
+import MovieReview from "./components/MovieReview/MovieReview";
 
 const MovieDetailPage = () => {
   const { id } = useParams();
@@ -25,6 +26,7 @@ const MovieDetailPage = () => {
   return (
     <div className="detail-page-wrap">
       <MovieDetailInfo movie={movie} id={id} />
+      <MovieReview id={id} />
     </div>
   );
 };

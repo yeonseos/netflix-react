@@ -89,4 +89,8 @@
   .detail-info {
     width: 100%;
   }
+
+  .detail-badges {
+    margin-top: 0;
+  }
 }
